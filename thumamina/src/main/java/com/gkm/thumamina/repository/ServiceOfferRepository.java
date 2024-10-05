@@ -1,7 +1,12 @@
 package com.gkm.thumamina.repository;
 
-import org.hibernate.service.Service;
+import com.gkm.thumamina.model.entity.ServiceOffer;
+
+import com.gkm.thumamina.model.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ServiceOfferRepository extends JpaRepository<Service,Long> {
+import java.util.List;
+
+public interface ServiceOfferRepository extends JpaRepository<ServiceOffer,Long> {
+    List<ServiceOffer> findAllByUser(User user);
 }

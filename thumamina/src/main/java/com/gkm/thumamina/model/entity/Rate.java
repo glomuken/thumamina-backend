@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @Where(clause = "is_deleted is false")
-public class Rate extends JpaEntityBase{
+public class Rate extends JpaBaseEntity{
    @OneToOne
    User user;
    BigDecimal rateTotal = BigDecimal.valueOf(0);

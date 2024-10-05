@@ -32,7 +32,6 @@ public class UserService {
         User user = new User();
         user.setEmail(userDto.getEmail());
         user.setName(user.getName());
-        user.setLocation(userDto.getLocation());
         user.setRating(BigDecimal.valueOf(0));
         user.setSurname(userDto.getSurname());
         user.setNumber(userDto.getNumber());

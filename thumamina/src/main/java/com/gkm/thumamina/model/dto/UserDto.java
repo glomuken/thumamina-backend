@@ -11,7 +11,6 @@ public class UserDto extends BaseDto{
     String surname;
     String email;
     String number;
-    String location;
     String type;
 
 }

@@ -1,0 +1,35 @@
+server:
+  port: 8090
+  shutdown: graceful
+  servlet:
+    context-path: /api
+
+
+spring:
+  application:
+    name: thumamina
+
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        default_schema: thumamina
+  flyway:
+    default-schema: thumamina
+    create-schemas: true
+    baseline-on-migrate: true
+    enabled: true
+    out-of-order: true
+
+
+app:
+  token:
+    secret: ${APP_TOKEN_SECRET:sPRm1OaumlJcrSkAev51G8O80DYjHIfTfVFJ4kD9bJA}
+    validity-minutes:
+      access: 300
+      password-reset: 1440

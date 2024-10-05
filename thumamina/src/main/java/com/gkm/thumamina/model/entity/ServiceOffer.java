@@ -11,13 +11,13 @@ import org.hibernate.annotations.Where;
 @Getter
 @Setter
 @Where(clause = "is_deleted is false")
-public class ServiceOffer {
+public class ServiceOffer extends JpaBaseEntity {
     @ManyToOne
     User user;
     String name;
     String description;
-    String area;
     String picture;
+    String rate;
     @OneToOne
     Category category;
 }
