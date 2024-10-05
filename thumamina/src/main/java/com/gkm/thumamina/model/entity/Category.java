@@ -1,8 +1,7 @@
 package com.gkm.thumamina.model.entity;
 
+
 import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.Where;
@@ -11,13 +10,7 @@ import org.hibernate.annotations.Where;
 @Getter
 @Setter
 @Where(clause = "is_deleted is false")
-public class ServiceOffer {
-    @ManyToOne
-    User user;
+public class Category extends JpaEntityBase{
     String name;
     String description;
-    String area;
-    String picture;
-    @OneToOne
-    Category category;
 }
