@@ -5,7 +5,7 @@ import jakarta.persistence.Entity;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.Where;
-import org.json.JSONObject;
+
 
 import java.math.BigDecimal;
 
@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @Where(clause = "is_deleted is false")
-public class User extends JpaEntityBase  {
+public class User extends JpaBaseEntity  {
     String name;
     String surname;
     String email;
